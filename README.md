@@ -2,7 +2,7 @@
 
 > This project is front end e-commerce build in nextjs
 
----
+### [live demo](https://kids-zone-78iyr0h8k-fateh-kudsi-11.vercel.app/)
 
 #### To vist Back end App
 
