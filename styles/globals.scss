@@ -1,0 +1,18 @@
+@use '../abstracts/fonts';
+@use '../abstracts';
+@use '../abstracts/reset';
+@use '/abstracts/colors' as *;
+
+.MuiSlider-rail {
+  background-color: $black !important;
+  height: 7px !important;
+}
+.MuiSlider-track {
+  background-color: $black !important;
+  height: 7px !important;
+}
+.MuiSlider-thumb {
+  height: 20px !important;
+  width: 20px !important;
+  background-color: $black !important;
+}

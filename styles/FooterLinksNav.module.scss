@@ -1,0 +1,57 @@
+@use '../abstracts' as *;
+
+.container {
+  width: 100%;
+  @include flexCenter(column);
+}
+
+.container details {
+  width: 100%;
+  background-color: $wihte;
+  color: $black;
+  padding: 0.75rem 4rem;
+  border-bottom: 3px solid $wihte-1;
+}
+.container details[open] {
+  background-color: $wihte-1;
+}
+
+.container details summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1.25rem;
+  font-size: 16px;
+  font-weight: bolder;
+}
+.container details[open] summary img:nth-of-type(1) {
+  display: none;
+}
+
+.container details[open] summary img:nth-of-type(2) {
+  display: block;
+}
+.removeIcon {
+  display: none;
+}
+
+.footerLinksContainer {
+  @include flexCenter(row);
+}
+.flex1 {
+  flex: 1;
+}
+
+.footerLinks {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 20px;
+}
+.footerLinks a {
+  text-align: left;
+  font-size: 18px;
+  font-weight: lighter;
+  margin-bottom: 20px;
+}

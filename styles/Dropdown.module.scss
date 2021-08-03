@@ -1,0 +1,217 @@
+@use '../abstracts' as *;
+
+.dropdownContainer {
+  position: relative;
+}
+
+// Dropdown Button
+.dropdwonButton {
+  width: 15rem;
+  font-size: 1.6rem;
+  height: 4.2rem;
+  background-color: transparent;
+  border: 0.3rem $black solid;
+  line-height: 3rem;
+  letter-spacing: 0.017rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  color: $black;
+  @media (min-width: $tablets) {
+    width: 20rem;
+  }
+}
+
+.dropdwonButton i {
+  transform: rotateZ(90deg);
+  font-size: 3rem;
+  color: $black;
+}
+
+.dropdwonButton i.dropDownOpen {
+  transform: rotateZ(-90deg);
+}
+
+// Dropdown
+
+.dropdown {
+  width: 35rem;
+  border: 0.3rem $black solid;
+  position: absolute;
+  top: 5.2rem;
+  background-color: $wihte-1;
+  z-index: 5;
+}
+
+.dropdown.dropdownPositionRight {
+  // left: auto;
+  right: 0;
+  // height: 7.5rem;
+  @include flexCenter(column);
+}
+
+.dropdownHeader {
+  width: 100%;
+  height: 6rem;
+  background-color: $wihte-1;
+  border-bottom: 0.1rem $gray-2 solid;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  position: sticky;
+  z-index: 2;
+  top: 0;
+}
+
+.dropdownHeader button {
+  width: 7rem;
+  height: 3.4rem;
+  border: 0.3rem $black solid;
+  background-color: transparent;
+  font-weight: bold;
+  margin-right: 1rem;
+  margin-left: 1rem;
+  transition: 0.2s all ease;
+  cursor: pointer;
+}
+
+.dropdownHeader button:hover {
+  background-color: $black;
+  color: $wihte;
+}
+.dropdownHeader button:disabled {
+  border: none;
+  background-color: #9b9b9b;
+  color: $wihte;
+  cursor: not-allowed;
+}
+
+.dropdownCheckboxes {
+  min-height: 15rem;
+  max-height: 15rem;
+  width: 100%;
+  margin: 1rem 0 1rem 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.dropdownCheckboxes li {
+  width: 32rem;
+}
+
+.positionCheckbox {
+  position: relative;
+  width: 100%;
+  height: 4.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-left: 0.8rem;
+}
+
+.dropdownCheckboxes li input {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.dropdownCheckboxes li input:checked + label {
+  background-color: $black;
+  color: $wihte;
+  box-shadow: none;
+}
+
+.dropdownCheckboxes li label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 1.3rem;
+  font-weight: 400;
+  background-color: $wihte;
+  box-sizing: border-box;
+  padding-top: 1.5rem;
+  padding-left: 1rem;
+  color: $black;
+  transition: 0.2s all ease;
+  justify-items: flex-start;
+}
+
+.dropdownCheckboxes li label:hover {
+  box-shadow: rgba(0, 0, 0, 0.5) -2px 2px 2px 0;
+}
+
+.dropdownCheckboxes li label span.numberOfProducts {
+  margin-left: 1rem;
+  color: #9b9b9b;
+}
+
+// Sort
+
+.radioLabel .sortCheckmark {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background-color: transparent;
+  position: absolute;
+  right: 1.5rem;
+  border: 0.2rem solid black;
+}
+.radioLabel .sortCheckmark::after {
+  display: block;
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  right: 0.1rem;
+  top: 0.1rem;
+  width: 0.9rem;
+  height: 0.9rem;
+  background-color: white;
+}
+
+.dropdownCheckboxes li input:checked + label span.sortCheckmark {
+  border-color: white;
+}
+
+span.sortCheckmark {
+  background: #000;
+}
+
+// Price Range
+
+.priceSliderContainer {
+  // left: auto;
+  right: 0;
+  height: 7.5rem;
+  @include flexCenter(column);
+}
+
+.priceSlider {
+  width: 100%;
+  background-color: white;
+  padding: 0 15px 0 15px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.priceValue {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.priceValue span {
+  cursor: default;
+  font-size: 1.6rem;
+}

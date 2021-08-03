@@ -1,0 +1,26 @@
+@use '../abstracts' as *;
+
+.emptyCartContainer {
+  margin-top: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.emptyCartContainer button {
+  width: 30rem;
+  height: 4.2rem;
+  background-color: $black;
+  color: $wihte;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+.emptyCartContainer h2 {
+  font-size: 2.6rem;
+  margin-bottom: 2rem;
+  @media (min-width: $tablets) {
+    font-size: 3.6rem;
+  }
+}

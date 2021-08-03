@@ -1,0 +1,15 @@
+@use '../abstracts' as *;
+.navContainer {
+  background-color: $black;
+  color: $wihte;
+  width: 100%;
+  height: 6rem;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @media (min-width: $tablets) {
+    background-color: $wihte;
+    color: $black;
+  }
+}

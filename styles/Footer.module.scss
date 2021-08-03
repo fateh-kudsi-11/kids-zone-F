@@ -1,0 +1,10 @@
+@use '../abstracts' as *;
+
+.FooterContainer {
+  background-color: $wihte-1;
+  height: 6rem;
+  color: $black;
+  width: 100%;
+  font-size: 1.6rem;
+  @include flexCenter(column);
+}

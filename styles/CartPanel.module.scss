@@ -1,0 +1,133 @@
+@use '../abstracts' as *;
+
+.cartPanel {
+  position: absolute;
+  width: 30rem;
+  background-color: $wihte;
+  border: $black 0.3rem solid;
+  right: 60%;
+  top: 2.8rem;
+  z-index: 103;
+  overflow: hidden;
+}
+.cartPanelEmpty {
+  position: absolute;
+  width: 15rem;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: $wihte;
+  right: -50%;
+  top: 3.5rem;
+  z-index: 103;
+  font-size: 1.6rem;
+  @include flexCenter(row);
+}
+
+.cartPanel .cartTitle {
+  text-align: center;
+  font-size: 2.4rem;
+  height: 4.7rem;
+  background-color: $wihte;
+  z-index: 2;
+  padding-top: 1rem;
+  background-color: $wihte-1;
+  font-family: 'Antonio-Bold';
+}
+.cartPanel .cartTitle h2 {
+  margin: 0 0 2rem 0;
+}
+.cartPanelProductsList {
+  margin: 0;
+  padding: 0;
+  max-height: 18rem;
+  overflow: auto;
+  margin-right: 0.5rem;
+}
+.cartPanelProductsList::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #f5f5f5;
+}
+
+.cartPanelProductsList::-webkit-scrollbar {
+  width: 6px;
+  background-color: #f5f5f5;
+}
+
+.cartPanelProductsList::-webkit-scrollbar-thumb {
+  background-color: #000000;
+}
+
+.cartPanelProductsList li {
+  width: 90%;
+  margin: 0 auto 2rem auto;
+  list-style: none;
+  @include flexCenter(row);
+  border-top: 0.1rem solid rgba(0, 0, 0, 0.2);
+  padding-top: 1rem;
+  position: relative;
+}
+.cartPanelProductsList li img {
+  width: 8rem;
+  height: 8rem;
+  flex: 1;
+}
+
+.cartPanelProductsList li button {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background-color: $wihte-1;
+  border: 0;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.7);
+}
+.cartPanelProductsList li button i {
+  transform: rotateX(0);
+  font-size: 2.5rem;
+}
+.cartPanelProductsList li button:hover {
+  color: $black;
+}
+
+.cartButtons {
+  width: 100%;
+  @include flexCenter(column);
+  background-color: $wihte-1;
+}
+.cartButtons button {
+  margin-top: 1rem;
+  width: 90%;
+  height: 3.6rem;
+  font-family: 'Lato';
+  font-weight: bold;
+  cursor: pointer;
+}
+.viewCart {
+  background-color: $wihte;
+  border: 0.3rem solid $black;
+}
+.viewCart:hover {
+  background-color: $black;
+  color: $wihte;
+}
+.viewCart:focus,
+.checkOut:focus {
+  border: none;
+  outline: none;
+}
+.checkOut {
+  background-color: $black;
+  border: none;
+  color: $wihte;
+  margin-bottom: 1rem;
+}
+
+.checkOut:hover {
+  background-color: $wihte;
+  border: 0.3rem solid $black;
+  color: $black;
+}

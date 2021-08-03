@@ -1,0 +1,50 @@
+@use '../abstracts' as *;
+
+.loginContainer {
+  @include flexCenter(column);
+}
+
+.loginContainer h1 {
+  font-size: 3.4rem;
+  font-weight: bold;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.loginForm {
+  width: 100%;
+  @include flexCenter(column);
+  margin-top: 2rem;
+}
+
+.loginForm button {
+  width: 35rem;
+  height: 4.2rem;
+  background-color: $black;
+  color: $wihte;
+  font-weight: bold;
+  font-size: 1.4rem;
+  outline: none;
+  border: none;
+  margin-bottom: 2rem;
+  cursor: pointer;
+}
+
+.loginForm .link {
+  margin-bottom: 3rem;
+  background: transparent;
+  color: $black;
+  border: 0.3rem solid $black;
+}
+
+.loginErrorMsg {
+  color: $red;
+  border: 0.3rem solid $red;
+  padding: 1rem 2rem;
+  font-size: 1.4rem;
+  text-align: center;
+  line-height: 2rem;
+  @media (min-width: $mobile) {
+    margin: 1rem 2rem;
+  }
+}

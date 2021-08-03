@@ -1,0 +1,51 @@
+@use '../abstracts' as *;
+
+.userPanelContainer {
+  position: absolute;
+  width: 20rem;
+  height: 20rem;
+  background-color: $wihte;
+  border: $black 3px solid;
+  right: 60%;
+  top: 2.8rem;
+  z-index: 103;
+}
+
+.userPanelContainer p {
+  text-align: center;
+  font-size: 1.4rem;
+  margin: 3.2rem 0 2rem 0;
+}
+
+.userLinks {
+  @include flexCenter(column);
+}
+
+.loginButton {
+  width: 15.7rem;
+  height: 3.6rem;
+  background-color: $wihte;
+  border: 0.3rem solid $black;
+  font-size: 1.4rem;
+  cursor: pointer;
+  margin-bottom: 2rem;
+  transition: 0.2s all ease;
+}
+.loginButton:hover {
+  background-color: $black;
+  color: $wihte;
+}
+.loginButton:focus,
+.registerButton:focus {
+  outline: none;
+}
+
+.registerButton {
+  width: 16rem;
+  height: 3.6rem;
+  background-color: $black;
+  outline: 0;
+  border: 0;
+  color: $wihte;
+  cursor: pointer;
+}

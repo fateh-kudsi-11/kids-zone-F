@@ -1,0 +1,47 @@
+@use '../abstracts' as *;
+
+.formGroup {
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 35rem;
+}
+.formGroup label {
+  font-weight: 300;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.formGroup select {
+  width: 100%;
+  height: 4.2rem;
+  border: 0.3rem $black solid;
+  padding-left: 1rem;
+  font-size: 1.4rem;
+}
+.formGroup input {
+  padding: 0;
+  height: 3.6rem;
+  border: 0.3rem $black solid;
+  width: 100%;
+  font-size: 1.4rem;
+  padding-left: 1rem;
+}
+
+.formGroup small {
+  margin-top: 1rem;
+  font-size: 1.4rem;
+  color: $red;
+  visibility: hidden;
+  text-transform: capitalize;
+}
+
+.formGroup small.active {
+  visibility: visible;
+}
+.formGroup input.active,
+.formGroup select.active {
+  border-color: $red;
+}

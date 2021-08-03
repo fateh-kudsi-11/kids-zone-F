@@ -1,0 +1,89 @@
+@use '../abstracts' as *;
+
+.checkoutDelivery {
+  width: 90%;
+  height: 22rem;
+  max-width: 100%;
+  background-color: $wihte;
+  margin-top: 1rem;
+  @media (min-width: $tablets) {
+    width: 47rem;
+  }
+}
+
+.checkoutDelivery h2 {
+  font-family: 'Antonio-Bold';
+  font-size: 2.4rem;
+  line-height: 3.5rem;
+  letter-spacing: 0.1rem;
+  margin: 2.5rem 0 2rem 3rem;
+}
+.deliveryOption {
+  position: relative;
+  width: 90%;
+  margin: 0 1rem 3rem 3rem;
+  cursor: pointer;
+}
+.deliveryOption p {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+.deliveryOption p span {
+  margin-right: 1rem;
+}
+.deliveryOption p.deliverdDate {
+  font-weight: lighter;
+}
+
+.deliveryCheckmark {
+  display: block;
+  padding-left: 3.5rem;
+  margin-bottom: 1.2rem;
+  cursor: pointer;
+  font-size: 2.2rem;
+  z-index: 2;
+  position: absolute;
+  top: 2rem;
+  right: 0;
+  margin-left: 1rem;
+}
+
+.deliveryCheckmark input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  width: 2rem;
+  border: 0.1rem solid $black;
+  border-radius: 50%;
+}
+
+.deliveryCheckmark:hover input ~ .checkmark {
+  background-color: $gray-1;
+}
+
+.checkmark:after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+
+.deliveryCheckmark input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.deliveryCheckmark .checkmark:after {
+  top: 0.4rem;
+  left: 0.4rem;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background: $black;
+}

@@ -1,0 +1,29 @@
+@use '../abstracts' as *;
+
+.NavPanelContainer {
+  width: 100%;
+  background-color: $black;
+  @include flexCenter(column);
+  padding: 0 1.5rem;
+  color: $wihte;
+  transform: translateX(-100%);
+  position: absolute;
+  transition: 0.5s all ease;
+  z-index: 99;
+  @media (min-width: $tablets) {
+    display: none;
+  }
+}
+
+.openNavPanel {
+  transform: translateX(0);
+  overflow-x: hidden;
+}
+
+.socialContainer {
+  width: 100%;
+  height: 6rem;
+  background-color: $wihte-1;
+  @include flexCenter(row);
+  margin-bottom: 3rem;
+}

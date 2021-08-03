@@ -1,0 +1,71 @@
+@use '../abstracts' as *;
+
+.checkoutPage {
+  background-color: $wihte-1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 201;
+}
+
+.checkoutHeader {
+  width: 100%;
+  height: 7rem;
+  background-color: $wihte-1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  @media (min-width: $tablets) {
+    height: 10rem;
+  }
+}
+.checkoutLogo {
+  margin-top: 2rem;
+  border: $black 0.3rem solid;
+  width: 14.2rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.checkoutLogo span {
+  font-family: 'Antonio-Bold';
+  font-size: 2.4rem;
+  letter-spacing: 0.2rem;
+  color: $black;
+}
+.checkoutContainer {
+  @include flexCenter(row);
+}
+
+.checkoutContainerInfo {
+  @include flexCenter(column);
+}
+
+.checkoutEmail {
+  width: 90%;
+  height: 12rem;
+  background-color: $wihte;
+  max-width: 100%;
+  margin-top: 2rem;
+
+  @media (min-width: $tablets) {
+    width: 47rem;
+  }
+}
+.checkoutEmail h2 {
+  font-family: 'Antonio-Bold';
+  font-size: 2.4rem;
+  line-height: 3.5rem;
+  letter-spacing: 0.1rem;
+  margin: 2.5rem 0 0 3rem;
+}
+.checkoutEmail p {
+  margin: 1rem 0 0 3rem;
+  font-size: 1.6rem;
+  font-weight: lighter;
+}

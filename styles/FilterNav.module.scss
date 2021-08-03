@@ -1,0 +1,38 @@
+@use '../abstracts' as *;
+
+.filterNavContainer {
+  background-color: $black;
+  width: 100%;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  display: none;
+  @media (min-width: $tablets) {
+    display: flex;
+  }
+}
+
+.filterNavContainer ul {
+  @include flexCenter(row);
+}
+
+.filterNavContainer ul li button {
+  color: $wihte;
+  padding: 0.5rem 1.5rem;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  font-size: 1.6rem;
+  transition: 0.2s all ease;
+  box-sizing: border-box;
+}
+.filterNavContainer ul li button:hover {
+  color: $black;
+  background-color: $wihte;
+}
+
+.filterNavContainer ul li button.active {
+  border: 1px $wihte solid;
+}

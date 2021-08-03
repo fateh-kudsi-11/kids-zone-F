@@ -1,0 +1,102 @@
+@use '../abstracts' as *;
+
+.myAccountContainer {
+  background-color: $wihte-1;
+  display: none;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  @media (min-width: '1065px') {
+    display: flex;
+  }
+}
+.accountDe {
+  width: 60%;
+  background-color: $wihte;
+  margin-top: 3.6rem;
+  margin-bottom: 4rem;
+}
+.sideNavbar {
+  width: 30%;
+}
+.sideNavbarTitle {
+  width: 32rem;
+  height: 12rem;
+  background-color: $wihte;
+  @include flexCenter(column);
+  margin-top: 3.6rem;
+  position: relative;
+}
+.titleWelcome {
+  font-size: 2.8rem;
+  letter-spacing: 0.2rem;
+  margin-left: 1rem;
+}
+.titleName {
+  font-size: 2.8rem;
+  font-weight: 900;
+  letter-spacing: 0.2rem;
+  margin: 1rem 0 0 2rem;
+  text-transform: uppercase;
+}
+.titleCircle {
+  width: 8.8rem;
+  height: 8.8rem;
+  background-color: $black;
+  border-radius: 50%;
+  color: $wihte;
+  @include flexCenter(row);
+  position: absolute;
+  left: -2.5rem;
+}
+.titleLetters {
+  font-size: 2.4rem;
+  font-weight: 900;
+  letter-spacing: 0.1rem;
+}
+.sideNavbarLinks {
+  width: 32rem;
+  margin: 0;
+  margin-bottom: 2rem;
+  padding: 0;
+}
+.sideNavbarLinks li {
+  width: 100%;
+  height: 5.6rem;
+  background-color: $wihte;
+  margin: 0.5rem 0 0.5rem 0;
+  transition: 0.2s all ease;
+  cursor: pointer;
+  @include flexCenter(row);
+}
+.sideNavbarLinks li:hover {
+  background-color: $black;
+}
+.sideNavbarLinks li:hover,
+.sideNavbarLinks li:hover .logout {
+  color: $wihte;
+}
+.sideNavbarLinks li.active::before {
+  content: '';
+  width: 0.3rem;
+  height: 100%;
+  background-color: $black;
+}
+.sideNavbarLinks li a,
+.logout {
+  color: $black;
+  @include flexCenter(row);
+  width: 100%;
+  height: 100%;
+}
+.sideNavbarIcon {
+  font-size: 2rem;
+  padding-left: 1rem;
+}
+.sideNavbarLinkText {
+  font-size: 1.6rem;
+  flex: 2;
+  text-align: center;
+}

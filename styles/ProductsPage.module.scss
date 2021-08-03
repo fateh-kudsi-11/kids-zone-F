@@ -1,0 +1,20 @@
+@use '../abstracts' as *;
+
+.productPageContainer {
+  display: flex;
+  flex-direction: column;
+  background-color: $wihte-1;
+}
+.productPageImagesInfoContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10rem;
+  width: 100%;
+
+  @media (min-width: $tablets) {
+    height: calc(100vh - 60px);
+    flex-direction: row;
+  }
+}

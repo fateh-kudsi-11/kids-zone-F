@@ -1,0 +1,10 @@
+@use '../abstracts' as *;
+
+.ProductFiltersTitleContainer h1 {
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 3.2rem;
+  line-height: 3rem;
+  letter-spacing: 0.04rem;
+  margin-top: 4rem;
+}

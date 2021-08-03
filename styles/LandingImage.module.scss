@@ -1,0 +1,176 @@
+@use '../abstracts' as *;
+
+.landingContainer {
+  max-width: 100%;
+  background-color: $black;
+  height: calc(85vh - 6rem);
+  position: relative;
+  @media (min-width: $tablets) {
+    height: calc(100vh - 10rem);
+  }
+}
+
+.backgroundPosition {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: inherit;
+  overflow: hidden;
+}
+
+.bgOneClass,
+.bgTwoClass {
+  width: 100%;
+  height: inherit;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: inherit;
+  @include flexCenter(row);
+  position: relative;
+  transition: 0.5s all cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+.bgOneClass div,
+.bgTwoClass div {
+  @include flexCenter(column);
+  position: absolute;
+  gap: 2rem;
+  right: auto;
+  @media (min-width: $tablets) {
+    bottom: 15%;
+    left: 60%;
+    gap: 4rem;
+  }
+}
+
+.bgOneClass div {
+  @media (min-width: $tablets) {
+    left: 60%;
+    bottom: 15%;
+  }
+}
+
+.bgTwoClass div {
+  @media (min-width: $tablets) {
+    bottom: 15%;
+    left: 0;
+    right: 60%;
+  }
+}
+
+.bgTwoClass {
+  transform: translateX(100%);
+}
+.bgOneClass.showBgTwo {
+  transform: translateX(-100%);
+}
+.bgOneClass.showBgOne {
+  transform: translateX(0);
+  z-index: 1;
+}
+.bgTwoClass.showBgTwo {
+  transform: translateX(0%);
+  z-index: 1;
+}
+.bgTwoClass.showBgOne {
+  transform: translateX(100%);
+}
+/*
+Landing Text && Landing Button
+*/
+.landingText {
+  font-weight: bold;
+  background-color: $black;
+  color: $wihte;
+  font-size: 3.6rem;
+  padding: 1rem 1rem;
+  text-align: center;
+  margin-bottom: -1rem;
+  @media (min-width: $tablets) {
+    font-size: 4.8rem;
+    padding: 1rem 2rem;
+  }
+}
+.landingButton {
+  font-family: 'Antonio-Bold', sans-serif;
+  width: 26rem;
+  height: 4rem;
+  font-size: 1.8rem;
+  text-align: center;
+  transition: 0.2s background ease;
+  cursor: pointer;
+  color: $black;
+  @media (min-width: $tablets) {
+    width: 34rem;
+    height: 6rem;
+    font-size: 2.4rem;
+  }
+}
+.landingButton:hover {
+  background-color: $black;
+  color: $wihte;
+  border: none;
+  outline: none;
+}
+
+// check mark
+
+.changeBg {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+
+  margin-bottom: 3.6rem;
+  display: flex;
+}
+
+.checkMarkContainer {
+  display: block;
+  position: relative;
+  padding-left: 3.5rem;
+  margin-bottom: 1.2rem;
+  cursor: pointer;
+  font-size: 2.2rem;
+  z-index: 2;
+}
+
+.checkMarkContainer input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkMarkContainer .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2.5rem;
+  width: 2.5rem;
+  background-color: $wihte;
+  border-radius: 50%;
+}
+
+.checkMarkContainer:hover input ~ .checkmark {
+  background-color: $gray-1;
+}
+
+.checkmark:after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+
+.checkMarkContainer input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.checkMarkContainer .checkmark:after {
+  top: 0.5rem;
+  left: 0.5rem;
+  width: 1.4rem;
+  height: 1.4rem;
+  border-radius: 50%;
+  background: $black;
+}

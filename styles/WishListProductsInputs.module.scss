@@ -1,0 +1,39 @@
+@use '../abstracts' as *;
+
+.wishListInputsContainer {
+  width: 100%;
+  padding: 1rem 1.5rem;
+}
+
+.wishListInputsContainer select {
+  width: 100%;
+  height: 4.4rem;
+  margin-bottom: 2rem;
+  outline: none;
+  border: $black solid 0.3rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.wishListInputsContainer button {
+  outline: 0;
+  border: 0;
+  margin-bottom: 2rem;
+  width: 100%;
+  background-color: $black;
+  color: $wihte;
+  font-weight: bold;
+  display: flex;
+  min-width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  cursor: pointer;
+  height: 4.2rem;
+}
+
+.wishListInputsContainer button:disabled {
+  background-color: $gray-1;
+}
+.wishListInputsContainer button i {
+  transform: rotateX(0);
+}

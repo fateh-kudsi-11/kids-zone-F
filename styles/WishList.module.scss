@@ -1,0 +1,4 @@
+@use '../abstracts' as *;
+.wishListContainer {
+  @include flexCenter(row);
+}

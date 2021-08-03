@@ -1,0 +1,31 @@
+@use '../abstracts' as *;
+
+.myOrderContainer {
+  @include flexCenter(column);
+  padding: 4rem 0;
+  color: $black;
+  position: relative;
+  width: 100%;
+}
+.myOrderContainer h1 {
+  font-size: 2.6rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+.myOrderContainer p {
+  font-size: 2rem;
+  letter-spacing: 0.1rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.myOrderContainer button {
+  height: 4.4rem;
+  width: 33rem;
+  background-color: $black;
+  outline: 0;
+  border: 0;
+  color: $wihte;
+  cursor: pointer;
+  font-weight: bold;
+}

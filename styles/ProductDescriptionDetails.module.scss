@@ -1,0 +1,10 @@
+@use '../abstracts' as *;
+
+.descriptionAndDetailsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 35vh;
+  gap: 10rem;
+  margin-bottom: 4rem;
+}

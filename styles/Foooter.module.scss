@@ -1,0 +1,9 @@
+@use '../abstracts' as *;
+
+.footerContainer {
+  @include flexCenter(column);
+  display: none;
+  @media (min-width: $tablets) {
+    display: flex;
+  }
+}

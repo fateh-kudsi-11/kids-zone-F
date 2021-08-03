@@ -1,0 +1,27 @@
+@use '../abstracts' as *;
+
+.container {
+  @media (min-width: $tablets) {
+    display: flex;
+  }
+  align-items: center;
+  justify-content: center;
+  display: none;
+  gap: 2rem;
+}
+
+.container li {
+  font-size: 2rem;
+  cursor: pointer;
+  user-select: none;
+  transition: 0.2s all ease;
+}
+.container li:hover {
+  color: $gray;
+}
+
+.active {
+  background-color: $black;
+  color: $wihte;
+  padding: 10px;
+}

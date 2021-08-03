@@ -1,0 +1,27 @@
+/* ====================== */
+/* Fonts - Lato & Antonio */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+@font-face {
+  font-family: 'Antonio-Bold';
+  font-style: bold;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Antonio'),
+    url(../public/fonts/antonio/Antonio-Bold.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Antonio-Light';
+  font-style: lighter;
+  font-weight: 300;
+  font-display: swap;
+  src: local('Antonio'),
+    url(../public/fonts/antonio/Antonio-Light.ttf) format('truetype');
+}
+/* ============= */
+/* Material Icons */
+@import 'https://fonts.googleapis.com/icon?family=Material+Icons';
+/* ============= */
+
+$body-font-size: 10px;

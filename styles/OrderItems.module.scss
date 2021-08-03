@@ -1,0 +1,99 @@
+@use '../abstracts' as *;
+
+.orderItemsContainer {
+  width: 36rem;
+  background-color: $wihte;
+  align-self: flex-start;
+  position: sticky;
+  top: 1rem;
+  margin-left: 2rem;
+  height: 100%;
+  padding: 0 3rem 0 3rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  box-sizing: border-box;
+  display: none;
+  @media (min-width: $tablets) {
+    display: block;
+  }
+}
+
+.orderItemsHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 2rem 0;
+}
+
+.orderItemsHeader h2 {
+  font-size: 1.8rem;
+  font-family: 'Antonio-Bold';
+  letter-spacing: 0.2rem;
+}
+
+.orderItemsHeader button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 1.6rem;
+}
+
+.orderItemsHeader button:hover {
+  text-decoration: underline;
+}
+.orderItemsList {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  max-height: 26rem;
+  overflow: auto;
+}
+.orderItemsList::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #f5f5f5;
+}
+
+.orderItemsList::-webkit-scrollbar {
+  width: 6px;
+  background-color: #f5f5f5;
+}
+
+.orderItemsList::-webkit-scrollbar-thumb {
+  background-color: #000000;
+}
+.priceInfoContainer {
+  width: 100%;
+  border-top: 0.1rem solid rgba(0, 0, 0, 0.3);
+  padding-top: 1rem;
+}
+.subpriceCheckoutContainer,
+.deliveryCheckoutContainer,
+.checkoutTotalPayContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
+
+.subpriceCheckout,
+.deliveryCheckout,
+.totalTPay {
+  font-family: 'Antonio-Light';
+  letter-spacing: 0.2rem;
+  font-size: 1.6rem;
+}
+.totalTPay {
+  font-family: 'Antonio-Bold';
+  letter-spacing: 0.2rem;
+}
+.deliveryPrice,
+.subtotalPrice {
+  letter-spacing: 0.2rem;
+  font-size: 1.6rem;
+}
+.totalPriceToPay {
+  font-weight: bolder;
+  letter-spacing: 0.2rem;
+  font-size: 1.6rem;
+}

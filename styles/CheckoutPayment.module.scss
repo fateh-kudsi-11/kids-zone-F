@@ -1,0 +1,80 @@
+@use '../abstracts' as *;
+
+.checkoutPaymentContainer {
+  width: 90%;
+  margin-top: 1rem;
+  background-color: $wihte;
+  max-width: 100%;
+  @media (min-width: $tablets) {
+    width: 47rem;
+  }
+}
+
+.checkoutPaymentContainer h2 {
+  font-family: 'Antonio-Bold';
+  font-size: 2.4rem;
+  line-height: 3.5rem;
+  letter-spacing: 0.1em;
+  margin: 2.5rem 0 2rem 3rem;
+}
+
+.checkoutForm {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 1rem 0 2rem 3rem;
+  width: 100%;
+  flex-direction: column;
+}
+
+.formGroup {
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 30rem;
+}
+
+.formGroup label {
+  font-weight: 300;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.formGroup input {
+  padding: 0;
+  height: 3.6rem;
+  border: 0.3rem $black solid;
+  width: 100%;
+  font-size: 1.5rem;
+  padding-left: 1rem;
+}
+
+.cvcAndDateGroup {
+  width: 35rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cvcAndDate {
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.cvcAndDate label {
+  font-weight: 300;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.cvcAndDate input {
+  height: 3.6rem;
+  border: 0.3rem $black solid;
+  width: 50%;
+  font-size: 1.5rem;
+  padding-left: 1rem;
+}

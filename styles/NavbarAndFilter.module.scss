@@ -1,0 +1,16 @@
+@use '../abstracts' as *;
+
+.navbarContainer {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 200;
+}
+.staticP {
+  width: 100%;
+  position: static;
+}
+
+.navbarHidden {
+  top: -100px;
+}

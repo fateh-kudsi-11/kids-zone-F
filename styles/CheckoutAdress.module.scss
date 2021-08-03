@@ -1,0 +1,20 @@
+@use '../abstracts' as *;
+
+.checkoutAdressContainer {
+  width: 90%;
+  min-height: 12rem;
+  background-color: $wihte;
+  margin-top: 1rem;
+  position: relative;
+  max-width: 100%;
+  @media (min-width: $tablets) {
+    width: 47rem;
+  }
+}
+.checkoutAdressContainer h2 {
+  font-family: 'Antonio-Bold';
+  font-size: 2.4rem;
+  line-height: 3.5rem;
+  letter-spacing: 0.1rem;
+  margin: 2.5rem 0 0 3rem;
+}

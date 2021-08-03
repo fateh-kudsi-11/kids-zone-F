@@ -1,0 +1,68 @@
+@use '../abstracts' as *;
+
+.DiscountContainer {
+  @include flexCenter(column);
+  width: 100%;
+  height: 26rem;
+  background-color: $black;
+  color: $wihte;
+  user-select: none;
+}
+
+.DiscountContainer .DiscountText {
+  margin-bottom: 2rem;
+}
+
+.DiscountContainer button {
+  background-color: $wihte;
+  color: $black;
+  cursor: pointer;
+  height: 5rem;
+  width: 33rem;
+  outline: none;
+  border: none;
+  font-size: 2.4rem;
+  font-family: 'Antonio-Bold', sans-serif;
+  transition: 0.2s background ease;
+}
+.DiscountContainer button:hover {
+  background-color: $black;
+  color: $wihte;
+  border: 2px solid $wihte;
+  outline: none;
+}
+.DiscountContainer .DiscountText h1 {
+  font-weight: bold;
+  font-size: 2.4rem;
+  text-transform: uppercase;
+  @media (min-width: $tablets) {
+    font-size: 7.2rem;
+  }
+}
+
+.DiscountContainer .DiscountText h1 .number {
+  color: $black;
+  margin: 2rem;
+  -webkit-text-stroke: 1px $wihte;
+  color: none;
+
+  @media (min-width: $tablets) {
+    -webkit-text-stroke: 3px $wihte;
+  }
+}
+.DiscountContainer .DiscountText h1 .text {
+  @media (min-width: $tablets) {
+    animation: number 2s ease-in-out infinite;
+  }
+}
+
+@keyframes number {
+  from {
+    -webkit-text-stroke: 3px $wihte;
+    color: $black;
+  }
+  to {
+    -webkit-text-stroke: none;
+    color: $wihte;
+  }
+}

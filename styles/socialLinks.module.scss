@@ -1,0 +1,6 @@
+@use '../abstracts' as *;
+
+.socialLinksContainer {
+  @include flexCenter(row);
+  gap: 2.5rem;
+}

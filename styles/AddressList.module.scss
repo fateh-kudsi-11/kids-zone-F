@@ -1,0 +1,143 @@
+@use '../abstracts' as *;
+
+.addressListContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.selectedAddress {
+  justify-self: flex-start;
+  width: 100%;
+  margin: 20px 0 0 30px;
+}
+
+.selectedAddress p {
+  font-weight: lighter;
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+}
+
+.addressListContainer button {
+  align-self: flex-start;
+  margin-right: 20px;
+  margin-top: 20px;
+  border: none;
+  width: 100px;
+  height: 36px;
+  font-weight: bold;
+  cursor: pointer;
+  letter-spacing: 2px;
+}
+
+.addressListContainer button:focus {
+  outline: none;
+}
+
+.selectAddress {
+  width: 100%;
+}
+
+.checkoutAddressList {
+  padding: 0;
+  margin: 0;
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.checkoutAddressList li {
+  list-style: none;
+  width: 90%;
+  margin-left: 30px;
+  font-weight: lighter;
+  padding-top: 1rem;
+  position: relative;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+.checkoutAddressList li p {
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+}
+
+.addressCheckmark {
+  display: block;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  z-index: 2;
+  position: absolute;
+  top: 20px;
+  right: 0;
+  margin-left: 10px;
+}
+
+.addressCheckmark input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  /* background-color: black; */
+  border: 1px solid black;
+  border-radius: 50%;
+}
+
+.addressCheckmark:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.checkmark:after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+
+.addressCheckmark input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.addressCheckmark .checkmark:after {
+  top: 4px;
+  left: 4px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: black;
+}
+
+.addressListButtons {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  width: 90%;
+  margin-left: 30px;
+}
+
+.addressListButtons button {
+  margin-left: 30px;
+  margin-bottom: 30px;
+}
+
+.addNewAddressButton {
+  background-color: black;
+  flex: 2;
+  margin-left: 0;
+  color: white;
+}
+
+button.widthButton {
+  width: 85%;
+}

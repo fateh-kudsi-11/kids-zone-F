@@ -1,0 +1,7 @@
+@use '../abstracts' as *;
+
+.AccountViewsSContainer {
+  @media (min-width: '1064px') {
+    display: none;
+  }
+}

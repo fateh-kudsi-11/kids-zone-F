@@ -1,0 +1,31 @@
+@use '../abstracts' as *;
+
+.similarProductsClass {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.productListOverflow {
+  overflow: auto;
+  max-width: 100%;
+  padding: 0 2rem 0 2rem;
+}
+
+.similarProductsClass h1 {
+  font-family: 'Antonio-Bold', sans-serif;
+  font-size: 2.8rem;
+  letter-spacing: 0.2rem;
+  margin-bottom: 2rem;
+}
+
+.productList {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  list-style: none;
+  gap: 2rem;
+  overflow: auto;
+  margin-bottom: 2rem;
+}

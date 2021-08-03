@@ -1,0 +1,15 @@
+@use '../abstracts' as *;
+
+.cartPanelProductsInfo {
+  font-size: 14px;
+  margin-left: 10px;
+  display: flex;
+  align-content: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  flex: 2;
+}
+.cartPanelProductsInfo p {
+  margin: 0;
+  margin-bottom: 15px;
+}

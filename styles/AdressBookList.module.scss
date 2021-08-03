@@ -1,0 +1,9 @@
+@use '../abstracts' as *;
+
+.adressBookListContainer {
+  width: 100%;
+  @include flexCenter(row);
+  border-bottom: solid 20px $wihte-1;
+  max-width: 100%;
+  flex-wrap: wrap;
+}

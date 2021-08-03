@@ -1,0 +1,16 @@
+@use '../abstracts' as *;
+
+.cartAndTotalContainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  gap: 4rem;
+
+  @media (min-width: $tablets) {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}

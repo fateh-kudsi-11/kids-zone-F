@@ -1,0 +1,109 @@
+@use '../abstracts' as *;
+
+.singleCartProductContainer {
+  @include flexCenter(row);
+  width: 100%;
+  margin-bottom: 2rem;
+  border-top: 0.1rem solid rgba(0, 0, 0, 0.2);
+  padding-top: 1rem;
+  position: relative;
+  font-family: 'Antonio-Bold';
+}
+.singleCartProductContainer img {
+  width: 15rem;
+  height: 15rem;
+  margin-right: 1rem;
+}
+.productCartInfo {
+  display: flex;
+  align-content: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+.productCartInfo .priceClass {
+  font-weight: bold;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  letter-spacing: 0.2rem;
+}
+.productCartInfo .productNameClass {
+  margin-bottom: 1rem;
+  font-family: 'Antonio-Light';
+  font-size: 2rem;
+  letter-spacing: 0.2rem;
+}
+.productCartInfo form {
+  font-family: 'Antonio-Bold';
+  margin-bottom: 1rem;
+}
+
+.productCartInfo form select {
+  font-family: 'Antonio-Bold';
+  width: 4.2rem;
+  height: 3.2rem;
+  box-sizing: border-box;
+  margin-right: 1rem;
+  border: $black solid 0.2rem;
+  letter-spacing: 0.2rem;
+  @media (min-width: $tablets) {
+    width: 8.2rem;
+  }
+}
+.productCartInfo form button {
+  font-family: 'Antonio-Bold';
+  width: 100%;
+  margin-top: 1rem;
+  border: $black solid 0.3rem;
+  background-color: $wihte;
+  color: $black;
+  letter-spacing: 0.2rem;
+}
+.productCartInfo form button:hover {
+  background-color: $black;
+  color: $wihte;
+  border: none;
+}
+.productCartInfo form select.marginNone {
+  margin-right: 0;
+}
+.productCartInfo form select:focus {
+  outline: none;
+}
+.productCartInfo button {
+  background-color: $black;
+  font-family: 'Antonio-Bold';
+  letter-spacing: 0.2rem;
+  color: $wihte;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 4.2rem;
+  font-size: 2rem;
+  transition: ease 0.1s;
+}
+.productCartInfo button i {
+  transform: rotateX(0);
+  font-size: 2.8rem;
+}
+.productCartInfo button:hover {
+  background-color: transparent;
+  border: 0.3rem $black solid;
+  color: $black;
+}
+
+.deleteProductClass {
+  position: absolute;
+  top: 1rem;
+  right: 0;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.7);
+}
+.deleteProduct:hover {
+  color: $black;
+}

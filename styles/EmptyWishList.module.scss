@@ -1,0 +1,33 @@
+@use '../abstracts' as *;
+.emptyWishListContainer {
+  margin: 4rem 0;
+  @include flexCenter(column);
+}
+
+.emptyWishListContainer h2 {
+  font-size: 2.6rem;
+  margin-bottom: 2rem;
+  @media (min-width: $tablets) {
+    font-size: 3.6rem;
+  }
+}
+.emptyWishListContainer p {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.emptyWishListContainer button {
+  width: 30rem;
+  height: 4.2rem;
+  background-color: $black;
+  color: $wihte;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+.emptyWishListContainer button:focus {
+  outline: none;
+  border: none;
+}

@@ -1,0 +1,10 @@
+@use '../abstracts' as *;
+
+.paymentIconsContainer {
+  @include flexCenter(row);
+  gap: 2.5rem;
+}
+
+.paymentIconsContainer img {
+  cursor: pointer;
+}

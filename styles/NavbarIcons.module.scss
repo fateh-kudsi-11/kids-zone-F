@@ -1,0 +1,29 @@
+@use '../abstracts' as *;
+
+.NavbarIconsContainer {
+  @include flexCenter(row);
+  gap: 1.5rem;
+  user-select: none;
+}
+
+.NavbarIconsContainer li {
+  cursor: pointer;
+  position: relative;
+  display: none;
+  @media (min-width: $tablets) {
+    display: block;
+  }
+}
+.NavbarIconsContainer li i {
+  @media (min-width: $tablets) {
+    font-size: 3rem;
+  }
+}
+
+.totalQtyClass {
+  position: absolute;
+  top: 28%;
+  right: 38%;
+  font-weight: bold;
+  font-size: 1.6rem;
+}

@@ -1,0 +1,17 @@
+@use '../abstracts' as *;
+
+button.BackToMyDetailsContainer {
+  width: 20rem;
+  position: absolute;
+  background-color: transparent;
+  color: $black;
+  top: 5%;
+  left: -15%;
+  border: none;
+  @media (min-width: '1064px') {
+    display: none;
+  }
+}
+button.BackToMyDetailsContainer i {
+  font-size: 4rem;
+}

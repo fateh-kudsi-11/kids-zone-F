@@ -1,0 +1,36 @@
+@use '../abstracts' as *;
+
+.adressBookContainer {
+  @include flexCenter(column);
+  padding: 4rem 0;
+  color: $black;
+  position: relative;
+  width: 100%;
+}
+.adressBookContainer h1 {
+  font-size: 2.6rem;
+  font-weight: bold;
+}
+.adressBookContainer h2 {
+  font-size: 2.4rem;
+  margin: 2rem 0;
+}
+
+.adressBookForm {
+  width: 100%;
+  @include flexCenter(column);
+  margin-top: 2rem;
+}
+
+.adressBookForm button {
+  width: 35rem;
+  height: 4.2rem;
+  background-color: $black;
+  color: $wihte;
+  font-weight: bold;
+  font-size: 1.4rem;
+  outline: none;
+  border: none;
+  margin-bottom: 2rem;
+  cursor: pointer;
+}
